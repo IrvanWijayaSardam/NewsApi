@@ -27,5 +27,23 @@
         android:id="@+id/sourceNewsFragment"
         android:name="com.aminivan.newsapi.view.fragment.SourceNewsFragment"
         android:label="fragment_source_news"
-        tools:layout="@layout/fragment_source_news" />
+        tools:layout="@layout/fragment_source_news" >
+        <action
+            android:id="@+id/action_sourceNewsFragment_to_articleFragment"
+            app:destination="@id/articleFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/articleFragment"
+        android:name="com.aminivan.newsapi.view.fragment.ArticleFragment"
+        android:label="fragment_article"
+        tools:layout="@layout/fragment_article" >
+        <action
+            android:id="@+id/action_articleFragment_to_detailArticleFragment"
+            app:destination="@id/detailArticleFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailArticleFragment"
+        android:name="com.aminivan.newsapi.view.fragment.DetailArticleFragment"
+        android:label="fragment_detail_article"
+        tools:layout="@layout/fragment_detail_article" />
 </navigation>

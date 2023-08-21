@@ -1,6 +1,7 @@
 package com.aminivan.newsapi.api
 
 
+import com.aminivan.newsapi.model.ResponseSource
 import com.aminivan.newsapi.model.ResponseTopHeadline
 import retrofit2.Call
 import retrofit2.Response
@@ -10,11 +11,16 @@ interface ApiService {
 
     @GET("top-headlines")
     suspend fun fetchTopHeadlines(
-        @Query("category") category : String,
-        @Query("country") country: String = "id",
+        @Query("sources") category : String,
         @Query("apiKey") apiKey : String = "f136c3cd54824b699ec80b233a64f6ed",
         @Query("pageSize")  pageSize: Int = 20,
         @Query("page") page: Int = 1,
         @Query("q") search: String,
-    ) : Response<ResponseTopHeadline> // Update Response type here
+    ) : Response<ResponseTopHeadline>
+
+    @GET("top-headlines/sources")
+    fun getAllSources(
+        @Query("category") category : String ,
+        @Query("apiKey") apiKey : String = "e604f4b947784474a99a6dcecce2599e"
+    ) : Call<ResponseSource>
 }

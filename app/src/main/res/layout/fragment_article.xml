@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="10dp"
+    tools:context=".view.fragment.ArticleFragment">
+
+      <EditText
+          android:hint="find here..."
+          android:layout_marginRight="100dp"
+          android:id="@+id/searchHere"
+          android:layout_marginBottom="5dp"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"/>
+      <ImageButton
+          android:src="@drawable/ic_search"
+          android:id="@+id/btnSearch"
+          android:layout_alignParentRight="true"
+          android:text="Search"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"/>
+
+   <androidx.recyclerview.widget.RecyclerView
+       android:id="@+id/rvArticle"
+       android:layout_below="@+id/searchHere"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"/>
+
+</RelativeLayout>

@@ -17,7 +17,7 @@ class TopHeadlinePagingSource(private val apiService: ApiService,private val cat
             val prevPage = currentPage - 1
             val nextPage = currentPage + 1
 
-            val response = apiService.fetchTopHeadlines(category,"id","f136c3cd54824b699ec80b233a64f6ed",20,currentPage,query)
+            val response = apiService.fetchTopHeadlines(category,"f136c3cd54824b699ec80b233a64f6ed",10,currentPage,query)
 
             if(response.code() >= 400)
                 throw Exception("Bad Request (${response.code()}), Silahkan mencoba lagi")
@@ -27,7 +27,7 @@ class TopHeadlinePagingSource(private val apiService: ApiService,private val cat
 
             val data = response.body()?.articles.orEmpty() // Convert nullable list to non-null list
             val responseData = mutableListOf<ArticlesItemPaging>()
-            val maxPage = response.body()!!.totalResults!!.toInt() / 20
+            val maxPage = (response.body()!!.totalResults!!.toInt() / 10) + 2
 
             if(response.body()!!.totalResults!!.toInt() != 0){
                 responseData.clear()
