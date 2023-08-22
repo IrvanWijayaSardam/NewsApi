@@ -39,8 +39,8 @@ class SourceViewModel @Inject constructor(
         return  liveDataSource
     }
 
-    fun callApiSource(categ : String, context: Context){
-        apiService.getAllSources(categ)
+    fun callApiSource(categ : String,query: String, context: Context){
+        apiService.getAllSources(categ,query)
             .enqueue(object : Callback<ResponseSource>{
                 override fun onResponse(
                     call: Call<ResponseSource>,

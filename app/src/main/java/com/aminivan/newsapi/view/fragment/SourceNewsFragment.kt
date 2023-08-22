@@ -58,7 +58,7 @@ class SourceNewsFragment : Fragment() {
 
 
     fun showDataSources(category : String){
-        vmSource.callApiSource(category,requireContext())
+        vmSource.callApiSource(category,"",requireContext())
         vmSource.getDataSource().observe(viewLifecycleOwner){
             if (it != null){
                 showSource(it)
@@ -80,7 +80,7 @@ class SourceNewsFragment : Fragment() {
 
     fun getSearchSource(category : String){
         if (binding.searchSource.text.toString().isNotEmpty()){
-            vmSource.callApiSource(category, requireContext())
+            vmSource.callApiSource(category,binding.searchSource.text.toString(), requireContext())
             vmSource.getDataSource().observe(viewLifecycleOwner){
                 if (it != null){
                     showSource(it)

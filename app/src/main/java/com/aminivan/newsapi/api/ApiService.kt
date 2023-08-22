@@ -21,6 +21,7 @@ interface ApiService {
     @GET("top-headlines/sources")
     fun getAllSources(
         @Query("category") category : String ,
+        @Query("q") query: String,
         @Query("apiKey") apiKey : String = "e604f4b947784474a99a6dcecce2599e"
     ) : Call<ResponseSource>
 }

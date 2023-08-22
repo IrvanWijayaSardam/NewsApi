@@ -17,6 +17,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.aminivan.newsapi.R
 import com.aminivan.newsapi.databinding.FragmentArticleBinding
 import com.aminivan.newsapi.model.ArticlesItemPaging
+import com.aminivan.newsapi.view.adapter.LoadMoreAdapter
 import com.aminivan.newsapi.view.adapter.TopHeadlineAdapterPaging
 import com.aminivan.newsapi.viewmodel.SourceViewModel
 import dagger.hilt.android.AndroidEntryPoint
@@ -60,6 +61,12 @@ class ArticleFragment : Fragment() {
         binding.rvArticle.adapter = adapterTopHeadlinePagination
         binding.rvArticle.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
 
+        binding.rvArticle.adapter = adapterTopHeadlinePagination.withLoadStateFooter(
+            LoadMoreAdapter{
+                adapterTopHeadlinePagination.retry()
+            }
+        )
+
         viewLifecycleOwner.lifecycleScope.launch {
             vmSource.topheadline.collectLatest {
                 if(it != null){
@@ -69,6 +76,8 @@ class ArticleFragment : Fragment() {
                 }
             }
         }
+
+
 
         adapterTopHeadlinePagination.setOnItemClickListener(object : TopHeadlineAdapterPaging.OnItemClickListener{
             override fun onItemClick(item: ArticlesItemPaging) {
