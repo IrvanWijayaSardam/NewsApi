@@ -20,9 +20,9 @@ Features :
 
 Screenshot :
 
-![i][Splash Screen](https://github.com/IrvanWijayaSardam/NewsApi/blob/master/image/SplashScreen.png)
-![i][Detail Screen](https://raw.githubusercontent.com/IrvanWijayaSardam/NewsApi/master/image/Detail.png)
-![i][Article Screen](https://raw.githubusercontent.com/IrvanWijayaSardam/NewsApi/master/image/Articles.png)
-![i][Internet Status](https://raw.githubusercontent.com/IrvanWijayaSardam/NewsApi/master/image/InternetStatus.png)
-![i][Source News](https://github.com/IrvanWijayaSardam/NewsApi/blob/master/image/SourceNews.png)
-![i][Source Info](https://github.com/IrvanWijayaSardam/NewsApi/blob/master/image/SourcInfo.png)
+![1](https://github.com/IrvanWijayaSardam/NewsApi/blob/master/image/SplashScreen.png)
+![2](https://raw.githubusercontent.com/IrvanWijayaSardam/NewsApi/master/image/Detail.png)
+![3](https://raw.githubusercontent.com/IrvanWijayaSardam/NewsApi/master/image/Articles.png)
+![4](https://raw.githubusercontent.com/IrvanWijayaSardam/NewsApi/master/image/InternetStatus.png)
+![5](https://github.com/IrvanWijayaSardam/NewsApi/blob/master/image/SourceNews.png)
+![6](https://github.com/IrvanWijayaSardam/NewsApi/blob/master/image/SourcInfo.png)
