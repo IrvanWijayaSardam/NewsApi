@@ -1,6 +1,11 @@
 # JustNews
 News App for searching headline news, select sources by category,select news by sources - Native app written in Kotlin - 
-MVVM,Dagger Hilt,ViewBinding,Paging 3,Load image using Glide.
+- MVVM
+- Dagger Hilt
+- ViewBinding 
+- Paging 3 
+- Load image using Glide.
+- Navigation Component
 
 Overview : an App to helps users stay up-to-date on the latest headlines news.
 
