@@ -20,9 +20,9 @@ Features :
 
 Screenshot :
 
-[i][Splash Screen](image/SpashScreen.png)
-[i][Detail Screen](image/Detail.png)
-[i][Article Screen](image/Articles.png)
-[i][Internet Status](image/InternetStatus.png)
-[i][Source News](image/SourceNews.png)
-[i][Source Info](image/SourceInfo.png)
+[i][Splash Screen](./image/SpashScreen.png)
+[i][Detail Screen](./image/Detail.png)
+[i][Article Screen](./image/Articles.png)
+[i][Internet Status](./image/InternetStatus.png)
+[i][Source News](./image/SourceNews.png)
+[i][Source Info](./image/SourceInfo.png)
